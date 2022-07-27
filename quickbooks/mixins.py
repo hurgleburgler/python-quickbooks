@@ -132,6 +132,19 @@ class UpdateMixin(object):
         return obj
 
 
+class UpdateNoIdMixin(object):
+    qbo_object_name = ""
+    qbo_json_object_name = ""
+
+    def save(self, qb=None, request_id=None):
+        if not qb:
+            qb = QuickBooks()
+
+        json_data = qb.update_object(self.qbo_object_name, self.to_json(), request_id=request_id)
+        obj = type(self).from_json(json_data[self.qbo_object_name])
+        return obj
+
+
 class DeleteMixin(object):
     qbo_object_name = ""
 
