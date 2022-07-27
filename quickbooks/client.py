@@ -42,9 +42,9 @@ class QuickBooks(object):
 
     _BUSINESS_OBJECTS = [
         "Account", "Attachable", "Bill", "BillPayment",
-        "Class", "CreditMemo", "Customer",
+        "Class", "CreditMemo", "Customer", "CompanyCurrency",
         "Department", "Deposit", "Employee", "Estimate", "Invoice",
-        "Item", "JournalEntry", "Payment", "PaymentMethod",
+        "Item", "JournalEntry", "Payment", "PaymentMethod", "Preferences",
         "Purchase", "PurchaseOrder", "RefundReceipt",
         "SalesReceipt", "TaxCode", "TaxService/Taxcode", "TaxRate", "Term",
         "TimeActivity", "Transfer", "Vendor", "VendorCredit"
